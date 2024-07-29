@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>word counter</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        *{
+            color: rgb(92, 47, 47);
+        }
+
+        textarea{
+            color: rgb(111, 74, 230);
+            font-size: large;
+            background-color: aqua;
+            border-radius: 20px;
+        }
+        button{
+            border-radius: 20px;
+        }
+        p{
+            display: inline;
+        }
+        #result{
+            color: green;
+            font-weight: bold;
+        }
+        #remain{
+            color: red;
+            font-weight: bold;
+
+
+        }
+    </style>
+</head>
+<body>
+    <script>
+    function calculate() {
+        let char = document.getElementById("words");
+        let char1 = char.value;
+        console.log(char1.length);
+        document.getElementById("result").innerHTML=+char1.length;
+        document.getElementById("remain").innerHTML=(50-char1.length);
+    }</script>
+    <center><div>
+        <h1 style="text-align: center;">REAL TIME CHARACTER COUNTER</h1><br>
+        <br>
+        <textarea name="" id="words" cols="50" rows="10" placeholder="Enter the text here" maxlength=50 onkeyup="calculate() "></textarea><br>
+        <p >TOTAL CHARACTERS : </p> <p id="result">0</p><br>
+        <p>REMAINING <p id="remain">50</p> CHARACTERS</p> 
+    </div>
+</center>
+</body>
+</html>
